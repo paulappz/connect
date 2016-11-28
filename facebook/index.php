@@ -8,31 +8,8 @@ if (isset($_SESSION['userSession'])) {
  exit;
 }
 
-if (isset($_POST['submit'])) {
- 
- $email = strip_tags($_POST['email']);
- $password = strip_tags($_POST['password']);
- 
- $email = $con->real_escape_string($email);
- $password = $con->real_escape_string($password);
- 
- 
- $query = $con->query("SELECT `user_id`, `user_password`, `user_email` FROM `users` WHERE user_email ='$email'");
- $row=$query->fetch_array();
- 
- $count = $query->num_rows; // if email/password are correct returns must be 1 row
- 
- if (password_verify($password, $row['user_password']) && $count==1) {
-  $_SESSION['userSession'] = $row['user_id'];
-  header("Location: welcome.php");
- } else {
-  $msg = "<div id='errorBox'>
-     Invalid Username or Password !
-    </div>";
- }
- $con->close();
-}
 ?>
+
 <!DOCTYPE html>
 <html lang ="en">
 <head>
@@ -166,6 +143,36 @@ padding:10px 0px;
 
 
 </head>
+
+
+
+<?php
+if (isset($_POST['submit'])) {
+ 
+ $email = strip_tags($_POST['email']);
+ $password = strip_tags($_POST['password']);
+ 
+ $email = $con->real_escape_string($email);
+ $password = $con->real_escape_string($password);
+ 
+ 
+ $query = $con->query("SELECT `user_id`, `user_password`, `user_email` FROM `users` WHERE user_email ='$email'");
+ $row=$query->fetch_array();
+ 
+ $count = $query->num_rows; // if email/password are correct returns must be 1 row
+ 
+ if (password_verify($password, $row['user_password']) && $count==1) {
+  $_SESSION['userSession'] = $row['user_id'];
+  header("Location: welcome.php");
+ } else {
+  $msg = "<div id='errorBox'>
+     Invalid Username or Password !
+    </div>";
+ }
+ $con->close();
+}
+?>
+
 <body style=" background-image:linear-gradient(
       rgba(0, 0, 41, 0.40), 
       rgba(0, 0, 41, 0.40)
@@ -292,6 +299,20 @@ padding:10px 0px;
 	}else{
 		$permissions  = ['email'];
 		$loginUrl = $helper->getLoginUrl($redirect,$permissions);    ?>
+        
+        
+    <body style=" background-image:linear-gradient(
+      rgba(0, 0, 41, 0.40), 
+      rgba(0, 0, 41, 0.40)
+    ), url('../img/idanre.jpg');
+    background-repeat: no-repeat;
+    overflow-y: hidden; 
+     background-repeat: no-repeat;
+     background-position: center ;
+     background-size: contain;
+     max-width: 100%;
+    overflow-x: hidden;">
+        
         
         
 <section class="head">
