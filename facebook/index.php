@@ -181,9 +181,6 @@ padding:10px 0px;
    
 
 
-  
-<section class="head" style="padding-top: 40px;">
-
 <?php
 	
 
@@ -286,6 +283,10 @@ padding:10px 0px;
   </div>
         <div> Get started </div>
      
+     
+      </section>
+      
+      
 		<?php
 		
 	}else{
@@ -293,7 +294,7 @@ padding:10px 0px;
 		$loginUrl = $helper->getLoginUrl($redirect,$permissions);    ?>
         
         
- 
+<section class="head">
     <div class="sitename"><img src="../img/icon/home/ond2.png" width="200" height="100" />
      
      </div>
@@ -359,14 +360,16 @@ document.forms["myForm"]["email"].focus() ;
     
  
 
-    
-</body>
 
-</html>
-        
         
         
         <?php
 		//echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 	}
 ?>
+
+    
+</body>
+
+</html>
+        
