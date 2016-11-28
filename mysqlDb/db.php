@@ -2,12 +2,13 @@
 
 /* Database config */
 
-$db_host		= 'localhost';
-$db_user		= 'root';
-$db_pass		= '';
-$db_database	= 'ondoconnect'; 
+$db_host		= getenv('DB_HOSTNAME');
+$db_user		= getenv('DB_USER');
+$db_pass		= getenv('DB_PASS');
+$db_database	= getenv('DB_SCHEMA'); 
 
 /* End config */
+
 
 
 
