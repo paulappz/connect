@@ -33,15 +33,7 @@ if (isset($_POST['submit'])) {
  $con->close();
 }
 ?>
-        
-        
-        
-        
-        
-        
-        
-        
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang ="en">
 <head>
    
