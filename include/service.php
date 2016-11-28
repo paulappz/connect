@@ -4,10 +4,7 @@
  session_start();
 require_once("../mysqlDb/db.php");
 
-if (!isset($_SESSION['userSession'])) {
- header("Location: ../facebook/index.php");
- exit;
-}
+
 
 
  if (isset($_POST['done'])){

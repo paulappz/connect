@@ -3,7 +3,7 @@
 
 require_once("../mysqlDb/db.php");
 
-if (!isset($_SESSION['userSession'])) {
+
 
 
 
@@ -277,5 +277,3 @@ document.forms["myForm"]["email"].focus() ;
 }
 </script>
 
-<?php }
- ?>
