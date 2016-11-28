@@ -50,15 +50,15 @@ if (isset($_POST['submit'])) {
     content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Basic HTML5 page</title>
     
-    <link rel="stylesheet" href="../style.css">
-     <script type="text/javascript" src="../jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+     <script type="text/javascript" src="../appjs/jquery-3.1.1.min.js"></script>
        
 
 
 <style type="text/css">
   @font-face{
         font-family:'lola';
-        src: url('../Oranienbaum.ttf');
+        src: url('../include/Oranienbaum.ttf');
         }
         
         
@@ -177,7 +177,7 @@ padding:10px 0px;
 <body style=" background-image:linear-gradient(
       rgba(0, 0, 41, 0.40), 
       rgba(0, 0, 41, 0.40)
-    ), url('../idanre.jpg');
+    ), url('../img/idanre.jpg');
     background-repeat: no-repeat;
     overflow-y: hidden; 
      background-repeat: no-repeat;
@@ -274,7 +274,7 @@ padding:10px 0px;
 
   
 <section class="head">
-       <div class="sitename"><img src="../icon/home/ond2.png" width="200" height="100" />
+       <div class="sitename"><img src="../img/icon/home/ond2.png" width="200" height="100" />
      
      </div>
      
@@ -302,7 +302,7 @@ padding:10px 0px;
         
         
  
-    <div class="sitename"><img src="../icon/home/ond2.png" width="200" height="100" />
+    <div class="sitename"><img src="../img/icon/home/ond2.png" width="200" height="100" />
      
      </div>
      
@@ -329,7 +329,7 @@ padding:10px 0px;
         </form>
               <a class="facebook" href="<?php echo  $loginUrl;?>" ><div id="facebook">Login with facebook</div></a>
               
-        <p>Not a member? <a href="../sign-up.php" style="color:orange; text-decoration:none;font-style:bold;">Sign up now</a></p>
+        <p>Not a member? <a href="../include/sign-up.php" style="color:orange; text-decoration:none;font-style:bold;">Sign up now</a></p>
 
       </div> <!-- end login -->
              
