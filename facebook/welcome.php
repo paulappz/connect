@@ -1,13 +1,9 @@
 
           <?php
 
- session_start();
 require_once("../mysqlDb/db.php");
 
-if (!isset($_SESSION['userSession'])) {
- header("Location: index.php");
- exit;
-}
+
 ?>
 
 
