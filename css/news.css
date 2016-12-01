@@ -1,0 +1,74 @@
+
+     @font-face{
+        font-family:'lola';
+        src: url('../include/Oranienbaum.ttf');
+        }
+
+      #loadingDiv{
+  position:fixed;
+  top:0px;
+  right:0px;
+  width:100%;
+  height:100%;
+  background-color:#666;
+  background-image:url('../img/spin.gif');
+  background-repeat:no-repeat;
+  background-position:center;
+  z-index:10000000;
+  opacity: 0.4;
+  filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+   
+
+    
+    .area{
+        font-family:lola;
+        margin: 0 auto;
+        width: 300px;
+        height:auto;
+        color: #595959; 
+        padding: 5px;
+         font-size: 16px;
+         margin-bottom: 100px;
+         
+   background-color: white;
+    }
+    .sec{
+        border-shadow:5px;
+           border-radius: 5px;
+        font-size: 14px;
+        background-color:white;
+        padding:12px;
+        border: 1px solid gray;
+        margin-bottom: 10px;
+    }
+    .sec img{
+        float: left;
+        margin-right:5px;
+    }
+    .flash{
+        margin-left:20px;
+        text-align:left;
+    }
+    .tag{
+        height: 30px; width:70%;
+        margin-left:30%;
+    }
+    .tag .servicetag{
+        width:40px; height: 20px;
+        background-color: orangered;
+        float: left;
+        margin-right: 2px;
+        border-radius: 10%;
+        font-size: 12px;
+    }
+    a{
+        text-decoration: none;
+        color: #595959;
+       
+    }
+#readmore{
+    color:tomato;
+}
+
+  

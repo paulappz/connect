@@ -1,0 +1,60 @@
+ 
+     @font-face{
+        font-family:'lola';
+        src: url('../include/Oranienbaum.ttf');
+        }
+      .area{
+        font-family:lola;
+        margin: 0 auto;
+        width: 350px;
+        height:auto;
+      
+         font-size: 16px;
+         margin-bottom: 100px;
+         
+   background-color: #fefefe;
+
+    }
+    .sec{
+        background-color:white;
+        
+           border-radius: 5px;
+        font-size: 14px;
+        background-color: white;
+        padding: 12px;
+        border: 1px solid gray;
+        margin-bottom: 10px;
+    }
+    .name{
+        font-size:18px;
+        font-weight:bold;
+        color:#ff3300;
+        margin-bottom:3px;
+    }
+    .sec img{
+        float: left;
+    }
+    .address{
+        margin-left:20px;
+    }
+    .tag{
+        height: 30px; width:70%;
+        margin-left:30%;
+    }
+    .tag .servicetag{
+        width:2500px; height: 20px;
+        float: left;
+        margin-right: 2px;
+        border-radius:5px;
+        font-size: 12px;
+        padding:3px;
+    }
+    .tag .servicetag img{
+        float:left;
+    margin-right:40px;
+    }
+    .area a{
+        text-decoration: none;
+        color: #595959;
+        
+    }

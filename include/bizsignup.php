@@ -4,11 +4,7 @@
  session_start();
 require_once("../mysqlDb/db.php");
 
-if (!isset($_SESSION['userSession'])) {
- header("Location: ../facebook/index.php");
- exit;
-}
-
+ include("header.php");
  
 
 if(isset($_POST['submit'])){ 
@@ -65,148 +61,13 @@ $msg = "<div id='errorBox'>
 }
 
  ?>
-
-<!DOCTYPE html>
-<html lang ="en">
-<head>
-   
-    <meta charset="UTF-8">
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Basic HTML5 page</title>
-    
-    <link rel="stylesheet" href="../css/style.css">
-     <script type="text/javascript" src="../appjs/jquery-3.1.1.min.js"></script>
-      >
-
-
-<style type="text/css">
-  @font-face{
-        font-family:'lola';
-        src: url('Oranienbaum.ttf');
-        }
-        
-        
-
-#login {
-  width: 250px;
-  font-family:lola;
-  margin: 0 auto;
-}
-
-
-#login form input {
-  height: 35px;
-}
-
-#login form input[type="text"], select,  input[type="mail"],  input[type="name"]{
-  background-color: rgba(0, 0, 41, 0.80);
-  border-radius: 0px;
-  color:#e6e6e6;
-  margin-bottom: 1em;
-  padding: 0 16px;
-  width: 200px;
-}
-
-#login form input[type="submit"] {
-  border-radius: 0px;
-  -moz-border-radius: 0px;
-  -webkit-border-radius: 0px;
-  background-color: darkorange;
-  color: #eee;
-  font-weight: bold;
-  margin-bottom: 3px;
-  text-transform: uppercase;
-  width: 230px;
-}
-
-
-
-input {
-  border: none;
-  font-family: lola;
-  font-size: 14px;
-  line-height: 1.5em;
-  padding: 0;
-  -webkit-appearance: none;
-}
-
-#login form input[type="submit"]:hover {
-  background-color: orange;
-}
-
-#login > p {
-  text-align: center;
-  margin-top:0.5em;
-  margin-bottom:0.5em;
-}
-
-
-p {
-  margin-top:0.5em;
-  margin-bottom:0.5em;
-}
-
-.sitename {
-  margin: 0 auto;
-    
-}
-#login #errorBox{
- color:orange;
- height: 20px;
- width: 250px;
- font-weight: bold;
- font-size: 14px;
- 
- }
- select {
-     background-color: rgba(0, 0, 41, 0.80);
-    font-family:lola;
-       color:#e6e6e6;
-   width: 230px; 
-   height: 35px;
-   -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;
-    border: none;
-    font-size:14px;}
-    
-        .location{
-    background: url('../img/icon/home/location.png') 90% / 10% no-repeat  rgba(0, 0, 41, 0.80);
-        
-    }
-    
-      .bizcategory{
-    background: url('../img/icon/home/service.png') 90% / 10% no-repeat  rgba(0, 0, 41, 0.80);
-        
-    }
-    #login #errorBox{
- color:orange;
- height: 20px;
- width: 250px;
- font-weight: bold;
- font-size: 14px;
- 
- }
-    
-
-      </style>
-
-
+ <link rel="stylesheet" href="../css/bizsignup.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 </head>
-<body  style=" background-image:linear-gradient(
-      rgba(0, 0, 41, 0.40), 
-      rgba(0, 0, 41, 0.40)
-    ), url('../img/shasha.jpg');
-    background-repeat: no-repeat;
-    overflow-y: hidden; 
-     background-repeat: no-repeat;
-     background-position: center ;
-     background-size: contain;
-     max-width: 100%;
-    overflow-x: hidden;">
-    
+<body>
+    <script type="text/javascript" src="../appjs/loading.js"></script>
+    <div id="loadingDiv"></div>
    
 
 
@@ -273,98 +134,4 @@ p {
 </section>
 </body>
 </html>
-<script>
-function validateForm() {
-   
-    var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
- var bname = document.forms["myForm"]["bizname"].value;
-  var badd = document.forms["myForm"]["bizadd"].value;
-    var phone = document.forms["myForm"]["phoneno"].value;
-  var femail = document.forms["myForm"]["email"].value;
-  var bizlocatn = document.forms["myForm"]["location"].value;
-  var bizcat = document.forms["myForm"]["bizcategory"].value;
-  var bizsubcat = document.forms["myForm"]["subcategory"].value;
-  
- var bnamelenght =  document.getElementById("bizname").value.length;
-var baddlenght =  document.getElementById("bizadd").value.length;
- var phonelenght =  document.getElementById("phoneno").value.length;
- 
-if (bname == "") {
-document.forms["myForm"]["bizname"].focus() ;
-  document.getElementById("errorBox").innerHTML = "Enter your Business name";
-     return false;
-      
-    }
-    
-  if (bnamelenght >= 25) {
-document.forms["myForm"]["bizname"].focus() ;
-  document.getElementById("errorBox").innerHTML = "Fullname --> 24 characters maximum";
-     return false;
-      
-    }  
-  if( badd == "" )
-   {
-     document.forms["myForm"]["bizadd"].focus() ;
-   document.getElementById("errorBox").innerHTML = "Enter your Business Address";
-     return false;
-   }
-   
-   if (baddlenght >= 40) {
-document.forms["myForm"]["bizadd"].focus() ;
-  document.getElementById("errorBox").innerHTML = "Username --> 39 characters maximum";
-     return false;
-      
-    }  
-
-   
- if(phone == "")
-  {
-   document.forms["myForm"]["phoneno"].focus() ;
-   document.getElementById("errorBox").innerHTML = "Enter your phone number";
-   return false;
-  }
-  
-    if (phonelenght >= 12) {
-document.forms["myForm"]["phoneno"].focus() ;
-  document.getElementById("errorBox").innerHTML = "Password --> 11 characters maximun";
-     return false;
-      
-    }  
-  
-  
-      if (femail == "" )
- {
-  document.forms["myForm"]["email"].focus() ;
-  document.getElementById("errorBox").innerHTML = "Enter your email";
-  return false;
-  }else if(!emailRegex.test(femail)){
-document.forms["myForm"]["email"].focus() ;
-  document.getElementById("errorBox").innerHTML = "Enter a valid email";
-  return false;
-  }
-  
-  
-  if (bizlocatn == "" )
- {
-  document.forms["myForm"]["location"].focus() ;
-  document.getElementById("errorBox").innerHTML = " You must select a location";
-  return false;
-  }
-   
-  if(bizcat == ""){
-   document.forms["myForm"]["bizcategory"].focus() ;
-   document.getElementById("errorBox").innerHTML = "You must select a business category";
-   return false;
-   }
-    
-    
-     
-  if(bizsubcat == ""){
-   document.forms["myForm"]["subcategory"].focus() ;
-   document.getElementById("errorBox").innerHTML = "You must select a business Sun-category";
-   return false;
-   }
-    
-}
-</script>
-
+<script type="text/javascript" src="../appjs/bizsignup.js"></script>

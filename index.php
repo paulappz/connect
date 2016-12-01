@@ -1,99 +1,69 @@
-<!DOCTYPE html>
-<html lang ="en">
-<head>
-   
-    <meta charset="UTF-8">
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Basic HTML5 page</title>
-    
+
+     <?php
+
+ session_start();
+require_once("mysqlDb/db.php");
+
+ include("include/header-index.php");
+ ?>
+      
     <link rel="stylesheet" href="css/home-style.css">
-     <script type="text/javascript" src="appjs/jquery-3.1.1.min.js"></script>
-         
+    <link rel="stylesheet" href="css/index.css">
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        
+  
+
+
 </head>
 <body>
-    
-    <nav class="fixed-nav-bar">
-  <div id="menu" class="menu">
-   
-    <!-- Example responsive navigation menu  -->
-    <div class="container" onclick="myFunction(this)">
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
-</div>
- <div class="sitename"><img src="img/icon/home/ond2.png" width="100" height="55"/></div>
-
-   </div>
-    
-    <ul class="menu-items" style="display:none;">
-      <li><a href="#">Facebook</a></li>
-      <li><a href="#">Twitter</a></li>
-      <li><a href="#">Snapchat</a></li>
-      <li><a href="#">Linkedln</a></li>
-      <li><a href="#">Youtube</a></li>
-  </ul>
+    <script type="text/javascript" src="appjs/loading.js"></script>
+    <div id="loadingDiv"></div>
+     <?php include("include/nav-bar-index.php");?>
  
-</nav>
+   
 <section class="head">
     
-     <div  class="first"> Goods and Services directory </br>
-    <!--  <label data-id="1" >GO ?  </label>  
-      <label data-id="2" > VISIT ? </label>-->
+     <div  class="first"><strong> Businesses and Services </strong> </br>
+ 
         </div>
              
              <div>
                  <div  class="field">
                      
-                     <a href="include/home.php?service=1" id="plaza" >   <div class="visit" ><img class="friend" src="img/icon/home/friend.png"  width="50" height="50"/></br> Shopping plazas</div></a>
-                    <a href="include/home.php?service=2" id="friends" >  <div class="visit" ><img class="friend" src="img/icon/home/friend.png"  width="50" height="50" /> </br> Friends </div></a>
-                   <a href="include/home.php?service=3" id="hotels" > <div class="visit" >  <img class="friend" src="img/icon/home/hotel (1).png"  width="50" height="50"/></br> Hotels </div> </a>
-                   <a href="include/home.php?service=4" id="cutlery" > <div class="visit" > <img class="friend" src="img/icon/home/cutlery (1).png"  width="50" height="50"/></br> Eatries</div>  </a>
-                  <a href="include/home.php?service=5" id="tourists" >  <div class="visit" >  <img class="friend" src="img/icon/home/tourist (1).png"  width="50" height="50"/></br> Tourist centers</div></a>
-                   <a href="include/home.php?service=6" id="hospitals" > <div class="visit" >  <img class="friend" src="img/icon/home/hotel.png"  width="50" height="50"/></br> Hospitals </div></a>
-                   <a href="include/home.php?service=7" id="cinemas" >  <div class="visit" > <img class="friend" src="img/icon/home/video-camera (1).png"  width="50" height="50"/></br> Cinemas</div></a>
-                   <a href="include/home.php?service=8" id="smartphones" >  <div class="visit" > <img class="friend" src="img/icon/home/smartphone.png"  width="50" height="50"/></br> Electronics & Gadget</div></a>
-                 <a href="include/home.php?service=9" id="market" >   <div class="visit" ><img class="friend" src="img/icon/home/market (2).png"  width="50" height="50"/></br> Local Markets</div></a>
-                 </div>
-                 <div class="btn">
-                     
-                     <a href="include/home.php?service=0">.. more</a>
-                     
+                     <a href="include/home.php?service=1" id="plaza" >   <div class="visit" ><img class="friend" src="img/java.png"  width="45" height="45"/></br> Software services</div></a>
+                    <a href="include/home.php?service=2" id="friends" >  <div class="visit" ><img class="friend" src="img/worldwide.png"  width="45" height="45" /> </br>Internet Services </div></a>
+                   <a href="include/home.php?service=3" id="hotels" > <div class="visit" >  <img class="friend" src="img/hospital.png"  width="45" height="45"/></br> Hotel </div> </a>
+                   <a href="include/home.php?service=4" id="cutlery" > <div class="visit" > <img class="friend" src="img/cutlery.png"  width="45" height="45"/></br> Eatry</div>  </a>
+                  <a href="include/home.php?service=5" id="tourists" >  <div class="visit" >  <img class="friend" src="img/tourist.png"  width="45" height="45"/></br> Tour</div></a>
+                   <a href="include/home.php?service=6" id="hospitals" > <div class="visit" >  <img class="friend" src="img/hotel.png"  width="45" height="45"/></br> Hospital </div></a>
+                   <a href="include/home.php?service=7" id="cinemas" >  <div class="visit" > <img class="friend" src="img/video-camera.png"  width="45" height="45"/></br> Cinema</div></a>
+                   <a href="include/home.php?service=8" id="smartphones" >  <div class="visit" > <img class="friend" src="img/chicken.png" width="45" height="45"/></br> Poultry</div></a>
+                 <a href="include/home.php?service=9" id="market" >   <div class="visit" ><img class="friend" src="img/market.png"  width="45" height="45"/></br>Market</div></a>
                  </div>
                  
+                 
+                 <input class="more"  id="more"type="button" onclick="location.href='include/home.php?service=0';" value="More" />
+                     
+                        
              </div>
              
     </section>
     
     
     
+<script type="text/javascript" src="appjs/toggle.js"></script>
 
-    <script>
-function myFunction(x) {
-   
-  $('.container').click(function() {
- 
-        $(".menu-items").hide();
-  } );
-   x.classList.toggle("change");
-      $('.container.change').click(function() {
- 
-        $(".menu-items").show();
-  } );
 
-}
-</script>
 
 
     
-    <footer class="fixed-foot-bar">
-      <div class="foot-menu">
-      <a class="home" href="index.php"></a>
-      <a class="compass" href="include/home.php?service=0"></a>
-      <a  class="know" href="#"></a>
-      <a class="email" href="include/email.php"></a>
+   <footer class="fixed-foot-bar">
       
-  </div>
+      <div  class="foot-menu" style="background-color:#f2f2f2;"><a class="home" href="index.php"></a></div>
+    <div class="foot-menu">  <a class="compass" href="include/home.php?service=0"></a></div>
+    <div class="foot-menu">  <a  class="know" href="include/news.php"></a></div>
+     <div class="foot-menu"> <a class="email" href="include/email.php"></a></div>
+
       </footer>
       
      

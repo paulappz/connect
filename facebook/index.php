@@ -163,6 +163,9 @@ if (isset($_POST['submit'])) {
  
  if (password_verify($password, $row['user_password']) && $count==1) {
   $_SESSION['userSession'] = $row['user_id'];
+  $_SESSION['userSession_fullname'] = $row['user_fullname'];
+  $_SESSION['userSession_username'] = $row['user_username'];
+  $_SESSION['userSession_email'] = $row['user_email'];
   header("Location: welcome.php");
  } else {
   $msg = "<div id='errorBox'>
@@ -202,7 +205,7 @@ if (isset($_POST['submit'])) {
 	  'app_secret' => 'fedbb6cca9323339fad7e978fe122b03',
 	  'default_graph_version' => 'v2.5',
 	]);
-	$redirect = 'http://localhost/home/facebook/index.php';
+	$redirect = 'http://localhost/connect/facebook/index.php';
 
 
 	# Create the login helper object
@@ -270,7 +273,7 @@ if (isset($_POST['submit'])) {
 
   
 <section class="head">
-       <div class="sitename"><img src="../img/icon/home/ond2.png" width="200" height="100" />
+       <div class="sitename"><img src="../img/ondocon.png" width="200" height="100" />
      
      </div>
      
@@ -316,13 +319,13 @@ if (isset($_POST['submit'])) {
         
         
 <section class="head">
-    <div class="sitename"><img src="../img/icon/home/ond2.png" width="200" height="100" />
+    <div class="sitename"><img src="../img/ondocon.png" width="200" height="100" />
      
      </div>
      
     
      <div  class="first">
-    Welcome to Ondo Service Connect
+   <strong> Welcome to Ondo Service Connect</strong>
      
         </div>
         

@@ -20,6 +20,7 @@ if (!isset($_SESSION['userSession'])) {
     <title>Basic HTML5 page</title>
     
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home.css">
      <script type="text/javascript" src="../appjs/jquery-3.1.1.min.js"></script>
          
 
@@ -62,7 +63,7 @@ if (!isset($_SESSION['userSession'])) {
   
 <section class="head" style="padding-top: 20px;">
     
-     <div class="sitename"><img src="../img/icon/home/ond2.png" width="200" height="100" />
+     <div class="sitename"><img src="../img/ondocon.png" width="200" height="100" />
      
      </div>
      
@@ -71,6 +72,9 @@ if (!isset($_SESSION['userSession'])) {
     Welcome to Ondo Service Connect
      
         </div>
+        
+        
+         <input class="more"  id="more"type="button" onclick="location.href='../index.php';" value="More" />
 
 
  <p>Do you own a Business? <a href="../include/bizsignup.php" style="color:orange; text-decoration:none;font-style:bold;">Register your Business</a></p>
