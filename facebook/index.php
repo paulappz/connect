@@ -335,7 +335,7 @@ if (isset($_POST['submit'])) {
  <div style="margin-bottom:6px;">OR</div>
          
         </form>
-              <a class="facebook" href="<?php// echo  $loginUrl;?>" ><div id="facebook">Login with facebook</div></a>
+              <a class="facebook" href="#<?php// echo  $loginUrl;?>" ><div id="facebook">Login with facebook</div></a>
               
         <p>Not a member? <a href="../include/sign-up.php" style="color:orange; text-decoration:none;font-style:bold;">Sign up now</a></p>
 
