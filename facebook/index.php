@@ -17,7 +17,7 @@ if (isset($_SESSION['userSession'])) {
     <meta charset="UTF-8">
     <meta name="viewport"
     content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Basic HTML5 page</title>
+    <title>Ondo Connect</title>
     
     <link rel="stylesheet" href="../css/style.css">
      <script type="text/javascript" src="../appjs/jquery-3.1.1.min.js"></script>
