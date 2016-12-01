@@ -198,7 +198,7 @@ if (isset($_POST['submit'])) {
 <?php
 	
 
-	
+	/*
 	
 	# Autoload the required files
 	require_once __DIR__ . '/vendor/autoload.php';
@@ -270,9 +270,9 @@ if (isset($_POST['submit'])) {
 		echo "Picture<br>";
 		echo "<img src='$image' /><br><br>";*/
         
-        	$image = 'https://graph.facebook.com/'.$userNode->getId().'/picture?width=200';
+   /*   	$image = 'https://graph.facebook.com/'.$userNode->getId().'/picture?width=200';
 		?>
-   
+   <!--
 
 
   
@@ -306,7 +306,8 @@ if (isset($_POST['submit'])) {
 	}else{
 		$permissions  = ['email'];
 		$loginUrl = $helper->getLoginUrl($redirect,$permissions);    ?>
-        
+    */   
+     -->
         
     <body style=" background-image:linear-gradient(
       rgba(0, 0, 41, 0.40), 
@@ -348,7 +349,7 @@ if (isset($_POST['submit'])) {
  <div style="margin-bottom:6px;">OR</div>
          
         </form>
-              <a class="facebook" href="<?php echo  $loginUrl;?>" ><div id="facebook">Login with facebook</div></a>
+              <a class="facebook" href="<?php// echo  $loginUrl;?>" ><div id="facebook">Login with facebook</div></a>
               
         <p>Not a member? <a href="../include/sign-up.php" style="color:orange; text-decoration:none;font-style:bold;">Sign up now</a></p>
 
