@@ -22,7 +22,10 @@ if (isset($_SESSION['userSession'])) {
     <link rel="stylesheet" href="../css/style.css">
      <script type="text/javascript" src="../appjs/jquery-3.1.1.min.js"></script>
        
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        
+ 
+  
 
 <style type="text/css">
   @font-face{
@@ -140,11 +143,12 @@ padding:10px 0px;
 
       </style>
 
-
+ 
 
 </head>
 
-
+ <script type="text/javascript" src="../appjs/loading.js"></script>
+    <div id="loadingDiv"></div>
 
 <?php
 if (isset($_POST['submit'])) {
