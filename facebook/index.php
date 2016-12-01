@@ -305,23 +305,9 @@ if (isset($_POST['submit'])) {
 		
 	}else{
 		$permissions  = ['email'];
-		$loginUrl = $helper->getLoginUrl($redirect,$permissions);    ?>
-    */   
-     -->
-        
-    <body style=" background-image:linear-gradient(
-      rgba(0, 0, 41, 0.40), 
-      rgba(0, 0, 41, 0.40)
-    ), url('../img/idanre.jpg');
-    background-repeat: no-repeat;
-    overflow-y: hidden; 
-     background-repeat: no-repeat;
-     background-position: center ;
-     background-size: contain;
-     max-width: 100%;
-    overflow-x: hidden;">
-        
-        
+		$loginUrl = $helper->getLoginUrl($redirect,$permissions);  */    ?>
+    
+  
         
 <section class="head">
     <div class="sitename"><img src="../img/ondocon.png" width="200" height="100" />
@@ -394,7 +380,7 @@ document.forms["myForm"]["email"].focus() ;
         
         <?php
 		//echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
-	}
+	//}
 ?>
 
     
