@@ -205,7 +205,7 @@ if (isset($_POST['submit'])) {
 	  'app_secret' => 'fedbb6cca9323339fad7e978fe122b03',
 	  'default_graph_version' => 'v2.5',
 	]);
-	$redirect = 'http://localhost/connect/facebook/index.php';
+	$redirect = 'https://pacific-citadel-64383.herokuapp.com/facebook/index.php';
 
 
 	# Create the login helper object

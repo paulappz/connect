@@ -3,10 +3,7 @@
 
 require_once("../mysqlDb/db.php");
 
-if (!isset($_SESSION['userSession'])) {
- header("Location: index.php");
- exit;
-}
+
 ?>
 
 
@@ -20,7 +17,7 @@ if (!isset($_SESSION['userSession'])) {
     <title>Basic HTML5 page</title>
     
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/index.css">
      <script type="text/javascript" src="../appjs/jquery-3.1.1.min.js"></script>
          
 
@@ -74,7 +71,7 @@ if (!isset($_SESSION['userSession'])) {
         </div>
         
         
-         <input class="more"  id="more"type="button" onclick="location.href='../index.php';" value="More" />
+         <input style="margin-top:100px;"class="more"  id="more"type="button" onclick="location.href='../index.php';" value="Get Started" />
 
 
  <p>Do you own a Business? <a href="../include/bizsignup.php" style="color:orange; text-decoration:none;font-style:bold;">Register your Business</a></p>

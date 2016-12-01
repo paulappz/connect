@@ -35,18 +35,24 @@ if(isset($_POST['submit'])){
  
  if ($count <= 3) {
      
-   $query2="INSERT INTO `ondo_businesses`(`businessz_name`, `business_add`, `business_phone`, `business_email`, `business_locatn_area`, `business_cat`, `business_sub_cat`, `business_manager_id`) VALUES ('$bizname','$bizadd','$phone','$email','$locatn','$bizcat','$subbizcat',' $user_id')";
+  // $query2="INSERT INTO `ondo_businesses`(`businessz_name`, `business_add`, `business_phone`, `business_email`, `business_locatn_area`, `business_cat`, `business_sub_cat`, `business_manager_id`) VALUES ('$bizname','$bizadd','$phone','$email','$locatn','$bizcat','$subbizcat',' $user_id')";
 
-if ($con->query($query2)) {
+//if ($con->query($query2)) {
    $msg = "<div id='errorBox'>
      successfully registered !
-     </div>";
+     </div>
+        <a href='../index.php'><input style='margin-top:20px;margin-bottom:10px'class='more'  id='more'type='button' 
+           value='Get Started' /></a>"
+      
+     ;
      
-  }else {
-   $msg = "<div id='errorBox'>
-       error while registering !
-     </div>";
-  }
+  //}
+  
+  //else {
+   //$msg = "<div id='errorBox'>
+     //  error while registering !
+    // </div>";
+ // }
   
  } else {
   
@@ -61,7 +67,10 @@ $msg = "<div id='errorBox'>
 }
 
  ?>
+ <link rel="stylesheet" href="../css/style.css">
  <link rel="stylesheet" href="../css/bizsignup.css">
+ <link rel="stylesheet" href="../css/index.css">
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 </head>
