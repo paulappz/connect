@@ -15,34 +15,44 @@ require_once("../mysqlDb/db.php");
        
   $service = $_GET['service']; 
   if ($service == 1){
-  $selectedservice="shopping plazas" ;
+  $selectedservice="Software Services";
+  $value ="6007" ;
      }
    else  if ($service == 2){
-  $selectedservice="find friends" ;
+  $selectedservice="Data Sales" ;
+   $value ="6008";
      }
    else  if ($service == 3){
-  $selectedservice="Hotels" ;
+  $selectedservice="Hotels";
+   $value ="6002";
      }
     else   if ($service == 4){
   $selectedservice="Eatries" ;
+   $value ="6003";
      }
      else  if ($service == 5){
   $selectedservice="Tourist centers" ;
+   $value ="6005";
      }
      else if ($service == 6){
   $selectedservice="Hospitals" ;
+   $value ="6006";
      }
     else if ($service == 7){
   $selectedservice="Cinemas" ;
+   $value ="6004";
      }
     else if ($service == 8){
-  $selectedservice="Electronics and Gadgets" ;
+  $selectedservice="Poultry" ;
+   $value ="6009";
      }
    else  if ($service == 9){
   $selectedservice="Markets" ;
+   $value ="6010";
      }
      else{
           $selectedservice="select a service" ;
+        $value ="1";
      }
       
       ?>
@@ -74,7 +84,7 @@ require_once("../mysqlDb/db.php");
  
  
 <select name="select2" class="select2">
-    <option value="1" selected > <?php echo $selectedservice;?></option>
+    <option value="<?php echo $value;?>" selected > <?php echo $selectedservice;?></option>
    <?php
    $query4 = " SELECT * FROM `subbizcategory` ";
 

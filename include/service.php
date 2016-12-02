@@ -68,7 +68,7 @@ require_once("../mysqlDb/db.php");
       <div class="area">
       <?php
         
-        echo " <a href=\"http://placehold.it/70x70\"><div class=\"sec\"> <img src=\"\"  height=\"70\" width=\"70\"/> <div class='name'>" .$row3["businessz_name"] ."</div>
+        echo " <a href=\"#\"><div class=\"sec\"> <img src=\"../img/unavai.jpg\"  height=\"70\" width=\"70\"/> <div class='name'>" .$row3["businessz_name"] ."</div>
          <div class=\"address\"> " . $row3["business_add"] . "</div>
         
         <div class=\"tag\"> 

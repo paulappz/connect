@@ -1,12 +1,10 @@
-
-     @font-face{
+@font-face{
         font-family:'lola';
-        src: url('../include/Oranienbaum.ttf');
+        src: url('Oranienbaum.ttf');
         }
-
-
-
-.profile{
+        
+        
+        .profile{
    color:gray; 
 }
 
@@ -78,6 +76,8 @@ input {
     border: none;
     font-size:14px;}
 
+        
+        
 
     img{
         margin-top:0px;
@@ -116,3 +116,4 @@ input {
           padding-top: 5px;
     }
     
+ 

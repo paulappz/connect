@@ -68,80 +68,11 @@ if(isset($_POST['submit'])){
     <title>Basic HTML5 page</title>
     
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sign-up.css">
      <script type="text/javascript" src="../appjs/jquery-3.1.1.min.js"></script>
           <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
 
-<style type="text/css">
-  @font-face{
-        font-family:'lola';
-        src: url('Oranienbaum.ttf');
-        }
-        
 
-#login {
-  width: 250px;
-  font-family:lola;
-  margin: 0 auto;
-}
-
-
-#login form input {
-  height: 40px;
-}
-
-#login form input[type="text"], input[type="password"],  input[type="mail"],  input[type="name"]{
-  background-color: rgba(0, 0, 41, 0.80);
-  border-radius: 0px;
-  color:#e6e6e6;
-  margin-bottom: 1em;
-  padding: 0 16px;
-  width: 200px;
-}
-
-#login form input[type="submit"] {
-  border-radius: 0px;
-  -moz-border-radius: 0px;
-  -webkit-border-radius: 0px;
-  background-color: darkorange;
-  color: #eee;
-  font-weight: bold;
-  margin-bottom: 3px;
-  text-transform: uppercase;
-  width: 230px;
-}
-
-
-input {
-  border: none;
-  font-family: 'Open Sans', Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.5em;
-  padding: 0;
-  -webkit-appearance: none;
-}
-
-#login form input[type="submit"]:hover {
-  background-color: orange;
-}
-
-#login > p {
-  text-align: center;
-}
-
-.sitename {
-  margin: 0 auto;
-    
-}
-#login #errorBox{
- color:orange;
- height: 20px;
- width: 250px;
- font-weight: bold;
- font-size: 14px;
- 
- }
-
-      </style>
 
 
 
@@ -165,7 +96,7 @@ input {
   
 <section class="head" style="padding-top: 20px;">
     
-     <div class="sitename"><img src="../img/icon/home/ond2.png" width="200" height="100" />
+     <div class="sitename"><img src="../img/ondocon.png" width="200" height="100" />
      
      </div>
      

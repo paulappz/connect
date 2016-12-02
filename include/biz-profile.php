@@ -19,7 +19,7 @@ require_once("../mysqlDb/db.php");
    <?php include("nav-bar.php");?>
    
 <section class="head">
-    
+   
  
  
  
@@ -39,30 +39,97 @@ $user_id= $_SESSION['userSession'];
  
    $_SESSION['userSession_bizname']= $row2['businessz_name'];
     $_SESSION['userSession_bizadd']= $row2['business_add'];
+    $_SESSION['userSession_bizphone']= $row2['business_phone'];
+       $_SESSION['userSession_locarea']= $row2['business_locatn_area'];
     
   
   
-   $msg = "<div id='Box' style='color:gray;'>
-     Your details Business details are bellow
+   $msg = "<div id='Box' style='color:gray;margin-top:10px; margin-bottom:20px;'>
+     <stong>Your Business details are below</strong>
      </div>";
      
-  
+   
 
  ?>
-
-
-     
-   <?php 
+ 
+   </div><img src="../img/bp.jpg" width="100%" height="20%"/><div>
+   <div id="profile">    
+        <?php 
   echo $msg
    ?>
-      <div class="profile"> Hello   <?php echo $_SESSION['userSession_fullname'] ?> , This is your Business profile dashboard, it displayes all you registered business
      
-      You can also edit your business profile here.
+     </br>
+
+<label>Name</label> <div class="details"><?php echo $_SESSION['userSession_bizname']; ?></div>
+   
+  <label>Address</label>  <div class="details">  <?php echo $_SESSION['userSession_bizadd']; ?> </div>
+  
+    <label>Phone No.</label>  <div class="details">  <?php echo $_SESSION['userSession_bizphone']; ?> </div>
+      <label>Location Area</label><div class="details"> <?php echo $_SESSION['userSession_locarea']; ?> </div>
+ 
+   </br>
+    
+    
+  
+
+     
+  
+      <div class="editdiv" style="color:#ff3300;margin-top:50px;">Click here to <a href="#" id="edit" style="color:BLACK;"><strong>Edit</strong><a/> your profile </div>
       
-       Your business name  is  <?php echo $_SESSION['userSession_bizname'] ?> while your business address is  <?php echo $_SESSION['userSession_bizadd'] ?>
-      
-      <div>Click here to edit your profile </div>
       </div>
+      
+      <div class="proedit" style="display:none; margin-top:50px;">
+          
+           <div style="color:#ff3300;margin-bottom:30px;"><strong>Edit your business profile </strong></div>
+          
+         <div id="login">      
+        
+        <form name="myForm" action="#" method="post" autocomplete="off" onsubmit="return validateForm()">
+ <div id="errorBox" ></div>
+<input type="name" id="bizname" placeholder="Business Name" name="bizname">
+<input type="text" id="bizadd" placeholder="Business Address" name="bizadd">
+<input type="text" id="phoneno" placeholder="Phone Contact" name="phoneno">
+ <select name="location" class="location">
+          
+    <option value ="">--Location Area--</option>
+<?php  /*  $query5 = " SELECT * FROM `locationarea` ";
+
+ $result5 = mysqli_query($con, $query5);
+            while($row5 = mysqli_fetch_assoc($result5)){
+
+
+    echo  "<option value=" .$row5["location_id"]. " >" . $row5["location_name"] ." </br> </option>"; } */?>
+    </select></p>
+    
+
+            
+<input type="submit" value="SAVE" name="submit">
+</form>
+</div>
+  
+   <a href="#" id="exit" style="color:BLACK;"><strong>Exit</strong><a/> 
+          
+      </div>
+      
+     <script> 
+       $(function(){
+   
+    $("#edit").on("click", function(){
+       $("#profile").hide();
+           $(".proedit").show();
+    });
+    $("#exit").on("click", function(){
+       
+           $(".proedit").hide();
+           $("#profile").show();
+    });
+    
+});
+</script>
+        
+      
+      
+      
   
     
    <?php

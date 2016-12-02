@@ -7,22 +7,9 @@ require_once("../mysqlDb/db.php");
  include("header.php");
  ?>
       <link rel="stylesheet" href="../css/home-style.css">
+       <link rel="stylesheet" href="../css/profile.css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-<style type="text/css">
-  @font-face{
-        font-family:'lola';
-        src: url('Oranienbaum.ttf');
-        }
-
-
-
-.profile{
-   color:gray; 
-}
-
-
-      </style>
 
 
 
@@ -37,13 +24,63 @@ require_once("../mysqlDb/db.php");
 
 <section class="head">
     
-      <div class="profile"> Hello   <?php echo $_SESSION['userSession_fullname'] ?> , This is your personal dashboard, it displayes all your business interest
+    </div><img src="../img/pp.jpg" width="100%" height="20%"/><div>
+   <div id="profile" style=" margin-top:20px;">    
+      <div style=" margin-top:10px;"> Your profile</div></br>
+    
+    <label>Name</label> <div class="details" style="color:white"><?php echo $_SESSION['userSession_fullname']; ?></div>
+   
+  <label>Email</label>  <div class="details" style="color:white">  <?php echo $_SESSION['userSession_email']; ?> </div>
+ 
+ 
+   </br>
      
-      You can also edit your profile here. Your email is  <?php echo $_SESSION['userSession_email'] ?> while your username is  <?php echo $_SESSION['userSession_username'] ?>
+  
+      <div class="editdiv" style="color:#ff3300;margin-top:50px;">Click here to <a href="#" id="edit" style="color:BLACK;"><strong>Change</strong><a/> your Password </div>
       
-      <div>Click here to edit your profile </div>
       </div>
-             
+      
+      <div class="proedit" style="display:none; margin-top:50px;">
+          
+           <div style="color:#ff3300;margin-bottom:30px;"><strong>Change Paswword </strong></div>
+          
+         <div id="login">      
+        
+        <form name="myForm" action="#" method="post" autocomplete="off" onsubmit="return validateForm()">
+ <div id="errorBox" ></div>
+<input type="name" id="bizname" placeholder="Old Password" name="bizname">
+<input type="text" id="bizadd" placeholder="New Password" name="bizadd">
+<input type="text" id="phoneno" placeholder="Comfirm New Password" name="phoneno">
+
+
+
+            
+<input type="submit" value="SAVE" name="submit">
+</form>
+</div>
+  
+   <a href="#" id="exit" style="color:BLACK;"><strong>Exit</strong><a/> 
+          
+      </div>
+      
+     <script> 
+       $(function(){
+   
+    $("#edit").on("click", function(){
+       $("#profile").hide();
+           $(".proedit").show();
+    });
+    $("#exit").on("click", function(){
+       
+           $(".proedit").hide();
+           $("#profile").show();
+    });
+    
+});
+</script>
+        
+    
+   
     </section>
     
    

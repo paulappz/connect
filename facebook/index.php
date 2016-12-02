@@ -24,124 +24,8 @@ if (isset($_SESSION['userSession'])) {
        
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         
- 
+  <link rel="stylesheet" href="../css/login.css">
   
-
-<style type="text/css">
-  @font-face{
-        font-family:'lola';
-        src: url('../include/Oranienbaum.ttf');
-        }
-        
-        
-.facebook{
-    background-color: #3b5998;
-    height: 40px;
-    width: 200px;
-    text-decoration: none;
-}
-#login {
-  width: 250px;
-  font-family:lola;
-  margin: 0 auto;
-}
-
-
-#login form input {
-  height: 40px;
-}
-
-#login form input[type="mail"], input[type="password"] {
-  background-color: rgba(0, 0, 41, 0.80);
-  border-radius: 0px;
-  color:#e6e6e6;
-  margin-bottom: 1em;
-  padding: 0 16px;
-  width: 200px;
-}
-
-#login form input[type="submit"] {
-  border-radius: 0px;
-  -moz-border-radius: 0px;
-  -webkit-border-radius: 0px;
-  background-color: darkorange;
-  color: #eee;
-  font-weight: bold;
-  margin-bottom: 3px;
-  text-transform: uppercase;
-  width: 230px;
-}
-
-a #facebook {
-    padding-top: 14px;
-    text-decoration: none;
-}
-
-#facebook {
-    
-    background-color: #000066;
-     border-radius: 0px;
-  -moz-border-radius: 0px;
-  -webkit-border-radius: 0px;
-  height: 30px;
-  color: #eee;
-  font-weight: bold;
-  margin-bottom: 3px;
-  width: 230px;
-  margin: 0 auto;
-  text-decoration: none;
-}
-
-input {
-  border: none;
-  font-family: 'Open Sans', Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.5em;
-  padding: 0;
-  -webkit-appearance: none;
-}
-
-#login form input[type="submit"]:hover {
-  background-color: orange;
-}
-
-#login > p {
-  text-align: center;
-}
-
-.sitename {
-  margin: 0 auto;
-    
-}
-
-.box {font-family:lola;
-background-color:rgba(0, 0, 102, 0.4);
-border:0;
-width:100%;
-webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-margin: 0 auto;
-text-align:center;
-padding:10px 0px;
-}
-	.box img{padding: 10px 0px;}
-	.box a{color: orange;cursor: pointer;text-decoration: none;}
-	.heading {text-align:center;padding:10px;font-family:lola;color:orange;font-size: 18px;font-weight: 400;}
-	.circle-image{width:100px;height:100px;-webkit-border-radius: 50%;border-radius: 50%;}
-	.welcome{font-size: 16px;font-weight: bold;text-align: center;margin: 10px 0 0;min-height: 1em;}
-	.oauthemail{font-size: 14px;}
-	
-   #login #errorBox{
- color:orange;
- height: 20px;
- width: 250px;
- font-weight: bold;
- font-size: 14px;
- 
- }
-
-
-      </style>
 
  
 
@@ -160,7 +44,7 @@ if (isset($_POST['submit'])) {
  $password = $con->real_escape_string($password);
  
  
- $query = $con->query("SELECT `user_id`, `user_password`, `user_email` FROM `users` WHERE user_email ='$email'");
+ $query = $con->query("SELECT * FROM `users` WHERE user_email ='$email'");
  $row=$query->fetch_array();
  
  $count = $query->num_rows; // if email/password are correct returns must be 1 row
