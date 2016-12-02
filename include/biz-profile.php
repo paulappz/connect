@@ -59,7 +59,7 @@ $user_id= $_SESSION['userSession'];
    ?>
      
      </br>
-
+<div style="height:100px;">
 <label>Name</label> <div class="details"><?php echo $_SESSION['userSession_bizname']; ?></div>
    
   <label>Address</label>  <div class="details">  <?php echo $_SESSION['userSession_bizadd']; ?> </div>
@@ -67,14 +67,14 @@ $user_id= $_SESSION['userSession'];
     <label>Phone No.</label>  <div class="details">  <?php echo $_SESSION['userSession_bizphone']; ?> </div>
       <label>Location Area</label><div class="details"> <?php echo $_SESSION['userSession_locarea']; ?> </div>
  
-   </br>
+   </br >
     
-    
+    </div>
   
 
      
   
-      <div class="editdiv" style="color:#ff3300;margin-top:70px;">Click here to <a href="#" id="edit" style="color:BLACK;"><strong>Edit</strong><a/> your profile </div>
+      <div class="editdiv" style="color:#ff3300;margin-top:100px;">Click here to <a href="#" id="edit" style="color:BLACK;"><strong>Edit</strong><a/> your profile </div>
       
       </div>
       

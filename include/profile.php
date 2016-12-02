@@ -28,13 +28,15 @@ require_once("../mysqlDb/db.php");
    <div id="profile" style=" margin-top:20px;">    
       <div style=" margin-top:10px;"> Your profile</div></br>
     
+    <div style="height:100px;">
+        
     <label>Name</label> <div class="details" style="color:white"><?php echo $_SESSION['userSession_fullname']; ?></div>
    
   <label>Email</label>  <div class="details" style="color:white">  <?php echo $_SESSION['userSession_email']; ?> </div>
  
  
    </br>
-     
+     </div>
   
       <div class="editdiv" style="color:#ff3300;margin-top:50px;">Click here to <a href="#" id="edit" style="color:BLACK;"><strong>Change</strong><a/> your Password </div>
       
