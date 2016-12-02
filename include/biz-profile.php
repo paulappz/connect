@@ -74,7 +74,7 @@ $user_id= $_SESSION['userSession'];
 
      
   
-      <div class="editdiv" style="color:#ff3300;margin-top:50px;">Click here to <a href="#" id="edit" style="color:BLACK;"><strong>Edit</strong><a/> your profile </div>
+      <div class="editdiv" style="color:#ff3300;margin-top:70px;">Click here to <a href="#" id="edit" style="color:BLACK;"><strong>Edit</strong><a/> your profile </div>
       
       </div>
       
