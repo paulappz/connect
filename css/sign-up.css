@@ -4,6 +4,30 @@
         src: url('Oranienbaum.ttf');
         }
         
+        
+     body{
+         
+      background-image:linear-gradient(
+      rgba(0, 0, 41, 0.40), 
+      rgba(0, 0, 41, 0.40)
+    ), url('../img/idanre.jpg');
+    background-repeat: no-repeat;
+    overflow-y: hidden; 
+     background-repeat: no-repeat;
+     background-position: center ;
+     background-size: contain;
+     max-width: 100%;
+    overflow-x: hidden;
+    -webkit-background-size: 100%; 
+    -moz-background-size: 100%; 
+    -o-background-size: 100%; 
+    background-size: 100%; 
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover;
+     }
+        
 
 #login {
   width: 250px;

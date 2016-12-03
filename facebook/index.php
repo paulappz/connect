@@ -64,17 +64,7 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<body style=" background-image:linear-gradient(
-      rgba(0, 0, 41, 0.40), 
-      rgba(0, 0, 41, 0.40)
-    ), url('../img/idanre.jpg');
-    background-repeat: no-repeat;
-    overflow-y: hidden; 
-     background-repeat: no-repeat;
-     background-position: center ;
-     background-size: contain;
-     max-width: 100%;
-    overflow-x: hidden;">
+<body >
     
    
 
