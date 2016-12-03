@@ -8,8 +8,8 @@
      body{
          
       background-image:linear-gradient(
-      rgba(0, 0, 41, 0.40), 
-      rgba(0, 0, 41, 0.40)
+      rgba(0, 0, 41, 0.20), 
+      rgba(0, 0, 41, 0.20)
     ), url('../img/idanre.jpg');
     background-repeat: no-repeat;
     overflow-y: hidden; 
