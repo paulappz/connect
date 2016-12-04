@@ -1,20 +1,20 @@
 <?php 
 
-/* Database config 
+/* Database config  */
 
 $db_host		= getenv('DB_HOSTNAME');
 $db_user		= getenv('DB_USER');
 $db_pass		= getenv('DB_PASS');
 $db_database	= getenv('DB_SCHEMA'); 
 
-
- End config  */
+/*
+ End config  
 
 $db_host		= "localhost";
 $db_user		= "root";
 $db_pass		= "";
 $db_database	= "ondoconnect";
- /*
+
 */
 
 $con = mysqli_connect($db_host,$db_user,$db_pass,$db_database);
