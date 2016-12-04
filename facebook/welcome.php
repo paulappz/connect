@@ -42,9 +42,10 @@ require_once("../mysqlDb/db.php");
 
 
 </head>
-<body  style=" background-image:linear-gradient(
-      rgba(0, 0, 41, 0.40), 
-      rgba(0, 0, 41, 0.40)
+<body  style="     
+     body{ background-image:linear-gradient(
+      rgba(0, 0, 41, 0.20), 
+      rgba(0, 0, 41, 0.20)
     ), url('../img/idanre.jpg');
     background-repeat: no-repeat;
     overflow-y: hidden; 
@@ -52,7 +53,15 @@ require_once("../mysqlDb/db.php");
      background-position: center ;
      background-size: contain;
      max-width: 100%;
-    overflow-x: hidden;">
+    overflow-x: hidden;
+     -webkit-background-size: 100%; 
+    -moz-background-size: 100%; 
+    -o-background-size: 100%; 
+    background-size: 100%; 
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover;}">
     
    
 
