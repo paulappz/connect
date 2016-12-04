@@ -73,9 +73,6 @@ require_once("../mysqlDb/db.php");
         
         <div class=\"tag\"> 
             <div class=\"servicetag\">
-            
-            
-            
                <a href='intent://send/08109163881#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end'><img src='../img/whatsapp.png' height='20' width='20'/></a>
                <a href='tel:". $row3["business_phone"] ."'><img src='../img/call.png' height='20' width='20'/></a>
                <a href='mailto:". $row3["business_email"] ."'><img src='../img/email.png' height='20' width='20'/></a>
