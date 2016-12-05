@@ -42,8 +42,7 @@ require_once("../mysqlDb/db.php");
 
 
 </head>
-<body  style="     
-     body{ background-image:linear-gradient(
+<body  style="background-image:linear-gradient(
       rgba(0, 0, 41, 0.20), 
       rgba(0, 0, 41, 0.20)
     ), url('../img/idanre.jpg');
